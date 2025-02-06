@@ -9,7 +9,7 @@ const AddBirthday = ({ setMessage, fetchBirthdays }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/birthdays', { name, birthdate });
+      await axios.post('https://birthday-web-backend.onrender.com/birthdays', { name, birthdate });
       setMessage('Birthday added successfully!');
       fetchBirthdays(); // Fetch updated list of birthdays
     } catch (error) {
