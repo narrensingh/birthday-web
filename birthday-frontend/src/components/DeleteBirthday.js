@@ -8,7 +8,7 @@ const DeleteBirthday = ({ setMessage, fetchBirthdays }) => {
   const handleDelete = async (e) => {
     e.preventDefault();
     try {
-      await axios.delete(`http://localhost:5001/birthdays/${name}`);
+      await axios.delete(`https://birthday-web-backend.onrender.com/birthdays/${name}`);
       setMessage('Birthday deleted successfully!');
       fetchBirthdays();
     } catch (error) {
