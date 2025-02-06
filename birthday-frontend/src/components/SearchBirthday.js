@@ -10,7 +10,7 @@ const SearchBirthday = ({ setMessage }) => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:5001/birthdays/${name}`
+        `https://birthday-web-backend.onrender.com/birthdays/${name}`
       );
       setBirthday(response.data);
       setMessage('');
