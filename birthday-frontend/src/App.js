@@ -14,7 +14,7 @@ function App() {
   // Fetch birthdays from the backend
   const fetchBirthdays = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/birthdays');
+      const response = await axios.get('https://birthday-web-backend.onrender.com/birthdays');
       setBirthdays(response.data);
     } catch (error) {
       console.error('Error fetching birthdays', error);
