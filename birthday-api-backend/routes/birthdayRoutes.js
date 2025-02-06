@@ -50,4 +50,19 @@ router.put('/:name', async (req, res) => {
   }
 });
 
+router.delete('/:name', async (req, res) => {
+  try {
+    const deletedBirthday = await Birthday.findOneAndDelete({
+      name: req.params.name,  
+    });
+
+    if (!deletedBirthday)
+      return res.status(404).json({ message: 'Birthday not found' });
+
+    res.json({ message: 'Birthday deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
