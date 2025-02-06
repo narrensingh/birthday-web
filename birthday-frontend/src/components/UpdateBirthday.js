@@ -9,7 +9,7 @@ const UpdateBirthday = ({ setMessage, fetchBirthdays }) => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5001/birthdays/${name}`, {
+      await axios.put(`https://birthday-web-backend.onrender.com/birthdays/${name}`, {
         birthdate: newBirthdate,
       });
       setMessage('Birthday updated successfully!');
